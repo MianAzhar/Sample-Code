@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <img src="./assets/imgs/menu.png">
+    </button>
+    <ion-title>
+      <img src="./assets/imgs/appLogo.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col col-4></ion-col>
+    <ion-col (click)="showConfirm()" col-4 class="center">
+      <img [src]="imagePath || './assets/imgs/avatar.png'" class="userImg">
+      <img src="./assets/imgs/cameraIcon.png" class="cameraIcon">
+    </ion-col>
+    <ion-col col-4></ion-col>
+  </ion-row>
+
+  <ion-grid padding>
+
+    <ion-label class="inputHead">Name</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="name" [(ngModel)]="doctor.name" placeholder="Name"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Email</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="email" name="email" [(ngModel)]="doctor.email" placeholder="Email"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Contact</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="tel" name="contact" [(ngModel)]="doctor.contact" placeholder="Contact"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Password</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="password" name="password" [(ngModel)]="doctor.password" placeholder="Password"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Confirm Password</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="password" name="confirmPassword" [(ngModel)]="doctor.confirmPassword" placeholder="Confirm Password"></ion-input>
+    </ion-row>
+
+    <p class="center">
+      <button (click)="saveDoctor()" ion-button round>SAVE</button>
+    </p>
+
+  </ion-grid>
+
+</ion-content>

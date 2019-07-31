@@ -1,0 +1,47 @@
+<ion-menu [content]="content">
+  <ion-header padding>
+    <ion-grid padding>
+      <p class="center mb-0">
+        <img [src]="profileURL || './assets/imgs/avatar.png'" class="userImg">
+      </p>
+      <p class="center userName white">{{displayName}}</p>
+    </ion-grid>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(appPages.homePage)">
+        <ion-icon name="home"></ion-icon>
+        Home
+      </button>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(appPages.addClientsPage)">
+        <ion-icon name="add"></ion-icon>
+        Add Clients
+      </button>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(appPages.homePage)">
+        <ion-icon name="list"></ion-icon>
+        View Clients
+      </button>
+      <button menuClose ion-item icon-left (click)="nav.setRoot(appPages.adminUsersPage)">
+        <ion-icon name="person"></ion-icon>
+        Admin Users
+      </button>
+      <button menuClose ion-item icon-left (click)="nav.setRoot('DoctorsPage')">
+        <ion-icon name="list"></ion-icon>
+        Health Care Providers
+      </button>
+      <button *ngIf="isAdmin == 'true'" menuClose ion-item icon-left (click)="nav.setRoot('AddDoctorPage')">
+        <ion-icon name="add"></ion-icon>
+        Add Health Care Provider
+      </button>
+      <button menuClose ion-item icon-left (click)="logoutUser()" >
+        <ion-icon name="log-out"></ion-icon>
+        Logout
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

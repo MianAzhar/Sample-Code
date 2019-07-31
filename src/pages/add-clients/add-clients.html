@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <img src="./assets/imgs/menu.png">
+    </button>
+    <ion-title>
+      <img src="./assets/imgs/appLogo.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col col-4></ion-col>
+    <ion-col (click)="chooseImage()" col-4 class="center">
+      <img src="./assets/imgs/avatar.png" class="userImg">
+      <img src="./assets/imgs/cameraIcon.png" class="cameraIcon">
+    </ion-col>
+    <ion-col col-4></ion-col>
+  </ion-row>
+
+  <ion-grid padding>
+
+    <ion-label class="inputHead">Name</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="name" [(ngModel)]="client.name" placeholder="Patient Name"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Date of birth</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="name" [(ngModel)]="client.dob" placeholder="Date of birth"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Injury</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="injury" [(ngModel)]="client.injury" placeholder="Specify Injury"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Address</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="location" [(ngModel)]="client.location" placeholder="Specify location"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Phone No</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="phone" [(ngModel)]="client.phone" placeholder="Phone No"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Next of kin name</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="kinName" [(ngModel)]="client.kinName" placeholder="Next of kin name"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Next of kin number</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="kinNumber" [(ngModel)]="client.kinNumber" placeholder="Next of kin number"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Email Address</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="email" name="email" [(ngModel)]="client.email" placeholder="Email Address"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Medicare Number</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="medicareNumber" [(ngModel)]="client.medicareNumber" placeholder="Medicare Number"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Health fund or third party provider name</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="fundProviderName" [(ngModel)]="client.fundProviderName" placeholder=""></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Health fund or third party provider client number</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="fundProviderClientNumber" [(ngModel)]="client.fundProviderClientNumber" placeholder=""></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Where the injury occurred</ion-label>
+    <ion-row class="inputRow">
+      <ion-input type="text" name="injuryOccurred" [(ngModel)]="client.injuryOccurred" placeholder="Location and Date"></ion-input>
+    </ion-row>
+
+    <ion-label class="inputHead">Description</ion-label>
+    <ion-row class="inputRow">
+      <ion-textarea type="text" name="description" [(ngModel)]="client.description" rows="7" placeholder="Description..."></ion-textarea>
+    </ion-row>
+
+    <p class="center">
+      <button (click)="createClient()" ion-button round>SAVE</button>
+    </p>
+
+  </ion-grid>
+
+</ion-content>

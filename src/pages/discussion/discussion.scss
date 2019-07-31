@@ -1,0 +1,115 @@
+page-discussion {
+
+  .aboutUser {
+    padding: 0px 10px !important;
+    margin-bottom: 1em !important;
+
+    .userImg {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid;
+      border-color: color($colors, primary);
+    }
+
+    .userName {
+      font-size: 18px !important;
+      color: color($colors, secondary);
+      font-weight: 500 !important;
+    }
+
+    .userLocation {
+      color: color($colors, secondary);
+      margin-bottom: 0px !important;
+    }
+
+    .description {
+      font-size: 11px !important;
+      color: color($colors, secondary);
+      margin-bottom: 0px !important;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .chatUser {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .chatUserName {
+    margin: 1px 0px;
+    font-size: 10px;
+    color: color($colors, secondary);
+    text-align: center;
+  }
+
+  .chatTime {
+    color: gray;
+    font-size: 8px;
+    text-align: center;
+    margin: 0px !important;
+  }
+
+  .chatMsg {
+    border-radius: 10px !important;
+    padding: 8px 12px !important;
+    font-size: 10px !important;
+    color: color($colors, secondary);
+    background-color: #bfe0e2;
+    width: fit-content !important;
+    line-height: 1.5 !important;
+    margin: 0px 0px 5px 12px !important;
+    min-height: 40px !important;
+  }
+
+  .shapes {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-right: 15px solid #bfe0e2;
+    border-bottom: 12px solid transparent;
+    position: absolute !important;
+    top: 0px !important;
+  }
+
+
+  ion-footer {
+
+    .text-input {
+      color: gray !important;
+      margin-bottom: 0px !important;
+    }
+
+    button {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50% !important;
+      font-size: 12px !important;
+
+      ion-icon {
+        padding-left: 15px !important;
+      }
+
+      .icon-ios {
+        padding: 0 0.5em !important;
+      }
+    }
+  }
+
+  .addMsg {
+    margin: 10px 0px !important;
+
+    span {
+      background-color: #e2e2e2;
+      color: #292929;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+  }
+
+}

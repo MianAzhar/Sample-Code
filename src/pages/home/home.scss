@@ -1,0 +1,44 @@
+page-home {
+
+  .back-button {
+    display: none !important;
+  }
+
+  .bar-button-menutoggle {
+    display: block !important;
+  }
+
+  ion-grid {
+
+    ion-label {
+      margin-left: 8px !important;
+      font-size: 18px !important;
+    }
+
+    ion-row {
+      padding: 5px 0px !important;
+      border-bottom: 1px solid #dedede !important;
+    }
+
+    img {
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+    }
+
+    .userName {
+      margin: 10px 0px 0px 0px !important;
+      color: color($colors, secondary) !important;
+      font-weight: 500 !important;
+    }
+
+    .smText {
+      margin: 2px 0px !important;
+      font-size: 10px !important;
+      color: gray !important;
+    }
+
+  }
+
+
+}

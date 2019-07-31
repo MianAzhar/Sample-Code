@@ -1,0 +1,33 @@
+page-login {
+
+  img {
+    width: 100px !important;
+  }
+
+  .inputRow {
+    border-radius: 5px !important;
+    border: 1px solid;
+    border-color: color($colors, primary) !important;
+
+    ion-icon {
+      color: color($colors, secondary) !important;
+      font-size: 20px !important;
+      margin-top: 7px !important;
+    }
+
+    ion-input {
+      color: color($colors, secondary) !important;
+    }
+
+    .text-input {
+      margin: 10px 0px !important;
+    }
+  }
+
+  ion-grid {
+    button {
+      height: 45px !important;
+    }
+  }
+
+}

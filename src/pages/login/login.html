@@ -1,0 +1,46 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+
+  <p class="center mt-5 mb-3">
+    <img src="./assets/imgs/appLogo.png">
+  </p>
+
+  <ion-grid padding>
+    <ion-label class="secondary">Enter Username:</ion-label>
+    <ion-row class="inputRow">
+      <ion-col col-2 class="center">
+        <ion-icon name="person"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-input type="email" name="email" [(ngModel)]="user.email" placeholder="Username"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-label class="secondary">Enter Password:</ion-label>
+    <ion-row class="inputRow mb-2">
+      <ion-col col-2 class="center">
+        <ion-icon name="lock"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-input type="password" name="email" [(ngModel)]="user.password" placeholder="Password"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <button (click)="login()" ion-button round block>Login</button>
+
+  </ion-grid>
+
+</ion-content>

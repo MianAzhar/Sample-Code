@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <img src="./assets/imgs/menu.png">
+    </button>
+    <ion-title>
+      <img src="./assets/imgs/appLogo.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <ion-label *ngIf="isAdmin && pendingClients.length > 0">Pending Clients</ion-label>
+
+    <ion-row *ngFor="let client of pendingClients; let i = index;" (click)="details(client)">
+      <ion-col col-3 class="pr-0">
+        <img [src]="client.photo || './assets/imgs/avatar.png'">
+      </ion-col>
+      <ion-col col-9 class="pl-0">
+        <p class="userName">{{client.name}}</p>
+        <p class="smText">{{client.injury}}</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-label>Clients</ion-label>
+
+    <ion-row *ngFor="let client of approvedClients; let i = index;" (click)="details(client)">
+      <ion-col col-3 class="pr-0">
+        <img [src]="client.photo || './assets/imgs/avatar.png'">
+      </ion-col>
+      <ion-col col-9 class="pl-0">
+        <p class="userName">{{client.name}}</p>
+        <p class="smText">{{client.injury}}</p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

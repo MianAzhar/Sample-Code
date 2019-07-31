@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add to Discussion</ion-title>
+    <ion-buttons end>
+      <button ion-button clear (click)="addDoctors();">Done</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-list>
+      <ion-list-header class="mb-0">
+        Select Health Care Providers to add
+      </ion-list-header>
+      <ion-item *ngFor="let doctor of allDoctors; let i = index;">
+        <ion-avatar item-left>
+          <img [src]="doctor.profileURL || './assets/imgs/avatar.png'">
+        </ion-avatar>
+        <ion-label>{{doctor.name}}</ion-label>
+        <ion-checkbox [(ngModel)]="doctor.isSelected" value="true" item-right></ion-checkbox>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-avatar item-left>
+          <img src="./assets/imgs/user-2.png">
+        </ion-avatar>
+        <ion-label>Dayan S.</ion-label>
+        <ion-checkbox item-right></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="./assets/imgs/user-3.png">
+        </ion-avatar>
+        <ion-label>Cayan S.</ion-label>
+        <ion-checkbox item-right></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="./assets/imgs/user-4.png">
+        </ion-avatar>
+        <ion-label>Billy S.</ion-label>
+        <ion-checkbox item-right></ion-checkbox>
+      </ion-item> -->
+    </ion-list>
+  </ion-grid>
+
+</ion-content>

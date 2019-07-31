@@ -1,0 +1,97 @@
+<!--
+  Generated template for the AdminUsersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <img src="./assets/imgs/menu.png">
+    </button>
+    <ion-title>
+      <img src="./assets/imgs/appLogo.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <ion-label>Admin Users</ion-label>
+
+    <ion-row *ngFor="let admin of admins; index as i">
+      <ion-col col-3 class="pr-0">
+        <img [src]="admin.profileURL || './assets/imgs/avatar.png'">
+      </ion-col>
+      <ion-col col-6 class="pl-0">
+        <p class="userName">{{admin.name}}</p>
+        <p class="smText">{{admin.email}}</p>
+      </ion-col>
+      <ion-col col-3 class="pl-0 pr-0">
+        <ion-icon name="call"></ion-icon>
+        <ion-icon name="mail"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <!-- <ion-row>
+      <ion-col col-3 class="pr-0">
+        <img src="./assets/imgs/user-1.png">
+      </ion-col>
+      <ion-col col-6 class="pl-0">
+        <p class="userName">Avron S.</p>
+        <p class="smText">Lorem Ipsum dolor</p>
+      </ion-col>
+      <ion-col col-3 class="pl-0 pr-0">
+        <ion-icon name="call"></ion-icon>
+        <ion-icon name="mail"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3 class="pr-0">
+        <img src="./assets/imgs/user-4.png">
+      </ion-col>
+      <ion-col col-6 class="pl-0">
+        <p class="userName">Billy S.</p>
+        <p class="smText">Lorem Ipsum dolor</p>
+      </ion-col>
+      <ion-col col-3 class="pl-0 pr-0">
+        <ion-icon name="call"></ion-icon>
+        <ion-icon name="mail"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3 class="pr-0">
+        <img src="./assets/imgs/user-3.png">
+      </ion-col>
+      <ion-col col-6 class="pl-0">
+        <p class="userName">Cayan S.</p>
+        <p class="smText">Lorem Ipsum dolor</p>
+      </ion-col>
+      <ion-col col-3 class="pl-0 pr-0">
+        <ion-icon name="call"></ion-icon>
+        <ion-icon name="mail"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3 class="pr-0">
+        <img src="./assets/imgs/user-2.png">
+      </ion-col>
+      <ion-col col-6 class="pl-0">
+        <p class="userName">Dayan S.</p>
+        <p class="smText">Lorem Ipsum dolor</p>
+      </ion-col>
+      <ion-col col-3 class="pl-0 pr-0">
+        <ion-icon name="call"></ion-icon>
+        <ion-icon name="mail"></ion-icon>
+      </ion-col>
+    </ion-row> -->
+
+  </ion-grid>
+
+</ion-content>
